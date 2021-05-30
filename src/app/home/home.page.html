@@ -1,0 +1,89 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Calculadora
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Calculadora</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <ion-input [(ngModel)]="valor" type="decimal" readonly="true" class="ion-text-right ion-padding-horizontal" style="font-size: 24px;"></ion-input>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" size="large" color="light" (click)="incluiNumero('7')">7</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" size="large" color="light" (click)="incluiNumero('8')">8</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" size="large" color="light" (click)="incluiNumero('9')">9</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" size="large" color="medium" (click)="incluiOperacao('/')">/</ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" size="large" color="light" (click)="incluiNumero('4')">4</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" size="large" color="light" (click)="incluiNumero('5')">5</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" size="large" color="light" (click)="incluiNumero('6')">6</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" size="large" color="medium" (click)="incluiOperacao('*')">*</ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" size="large" color="light" (click)="incluiNumero('1')">1</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" size="large" color="light" (click)="incluiNumero('2')">2</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" size="large" color="light" (click)="incluiNumero('3')">3</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" size="large" color="medium" (click)="incluiOperacao('-')">-</ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block" size="large" color="light" (click)="incluiNumero('0')">0</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" size="large" color="light" (click)="incluiPonto()">.</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" size="large" color="success" (click)="incluiOperacao('=')">=</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button expand="block" size="large" color="medium" (click)="incluiOperacao('+')">+</ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="margin-top: 15px;">
+        <ion-col>
+          <ion-button fill="outline" color="danger" expand="block" (click) = "limparTudo()">Limpar Tudo</ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="danger" expand="block" (click) = "limparUltimo()">Limpar</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
